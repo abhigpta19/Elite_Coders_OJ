@@ -1,0 +1,8 @@
+node_modules
+server/node_modules
+client/node_modules
+server/Components/outputs/*
+server/Components/inputs/*
+server/Components/executables/*
+server/Components/codes/*
+server/Components/outputs/f9103a30-09a2-412e-814f-389eb31aac38.txt 

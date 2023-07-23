@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #4BE34670;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .maincss {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .badihead {
+    color: #131111;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .yhakadiv{
+    text-align: center;
+    color: #666;
+  }
+
+  .skills {
+    margin-top: 20px;
+  }
+
+  .skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .skills li {
+    display: inline-block;
+    margin: 5px;
+    background-color: #4CAF50; /* Green color for skills tags */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }

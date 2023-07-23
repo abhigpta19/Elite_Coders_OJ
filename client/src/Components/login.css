@@ -1,0 +1,27 @@
+
+.img-fluid{
+  border-radius: 1rem 0 0 1rem;
+}
+.vh-100{
+  background-color: #9A616D;
+}
+
+.card{
+  border-radius: 1rem;
+}
+
+.fas-fa-cubes-fa-2x-me-3
+{
+  color: #ff6219;
+}
+
+.fw-normal-mb-3-pb-3 
+{
+  letter-spacing: 1px;
+}
+.mb-5-pb-lg-2{
+  color: #393f81;
+}
+.linksudhar{
+  color: #393f81;
+}
