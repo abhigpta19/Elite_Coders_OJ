@@ -36,12 +36,12 @@ function Login() {
 
           if(res.data["status"]==="exist")
           {
-            console.log("chalo bc",res.data);
+            console.log("running",res.data);
             jump("/",{state : {id : res.data}});
           }
           else
           {
-              alert("dobaara dekh le");
+              alert("please verify your credentials");
           }
         })
         

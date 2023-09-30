@@ -22,6 +22,7 @@ export default function Openingpage() {
       prof="/login"
       stat="Login"
     }
+    
     function profclick(){
 
 
@@ -35,7 +36,7 @@ export default function Openingpage() {
               }
               else 
               {
-                alert("login kro bsdk");
+                alert("please login");
                 jump("/login")
               }
             })

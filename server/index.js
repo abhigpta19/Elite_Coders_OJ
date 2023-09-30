@@ -75,16 +75,16 @@ const Problem = new mongoose.model("Problem", problemSchema);
 // }
 const protectRoute = async (req, res, next) => {
     const token= req.body.token;
-    console.log("tokenwa",token)
+    console.log("token",token)
     if (!token) {
-      return res.json("login kro bsdk");
+      return res.json("please login");
     }
     try {
       //verify jwt
       const { _id } = jwt.verify(token, process.env.SECRET_KEY);
       
       const user = await User.findOne({ _id });
-      console.log("ata h kya",user);
+      console.log("checking",user);
       //user not exists
       if (!user) {
 
@@ -105,7 +105,7 @@ const protectRoute = async (req, res, next) => {
   };
 
   app.post("/details",protectRoute,async(req,res) => {
-    console.log("details maangta hai mdrjaat");
+    console.log("details required");
     res.json(req.user);
 });
 
@@ -138,7 +138,7 @@ app.post("/addproblem",async(req,res) => {
     constraints : constraints
     }
     await Problem.insertMany([data]);
-    res.json("pata nahi");
+    res.json("done");
 });
 
 app.post("/compiler",protectRoute,async(req,res) => {
@@ -147,7 +147,7 @@ app.post("/compiler",protectRoute,async(req,res) => {
 
     if(code === undefined)
     {
-        res.status(404).json({success : "false" , error : "Khali hai"});
+        res.status(404).json({success : "false" , error : "empty"});
     }
     const filePath =await generateFile(lang,code);
     const check = await Problem.findOne({problemid : problemid})
@@ -163,7 +163,7 @@ app.post("/compiler",protectRoute,async(req,res) => {
 
     if(output != 0)
     {
-    console.log("hellopoiu",output)
+    console.log("hello",output)
     // const output = await executeCpp(filePath,inputfile);
     const outenc =  await getFileBase64Encoding(output);
     
@@ -179,7 +179,7 @@ app.post("/compiler",protectRoute,async(req,res) => {
 app.post('/login', async(req,res)=>{
     const {email,password} = req.body;
 
-    console.log("tilulillu",req.body)
+    console.log("things we get",req.body)
 
    try{
     const check = await User.findOne({email : email , password : password})
@@ -195,7 +195,7 @@ app.post('/login', async(req,res)=>{
         res.json({info: check , status: "exist",token : token});
     }
     else{
-        console.log("bhaag yha se");
+        console.log("no token found");
         res.json("notexist");
     }
     console.log("ab btao");
@@ -224,11 +224,11 @@ app.post('/register', async(req,res)=>{
     else{
         console.log("registered");
         await User.insertMany([data]);
-        res.json("notexist");
+        res.json("registered successfully");
     }
    }
    catch(e){
-        console.log("gadabad hai daya");
+        console.log("check the errors");
    }
     });
     

@@ -37,7 +37,7 @@ function Landing() {
           }
           else 
           {
-            alert("login kro bsdk");
+            alert("please login");
             jump("/login")
           }
         })
@@ -97,7 +97,7 @@ function Landing() {
           await axios.post('http://localhost:5000/compiler',cd)
           .then(res =>{
             alert(res.data)
-            if(res.data==="login kro bsdk")
+            if(res.data==="please login")
             {
               jump('/login');
             }   

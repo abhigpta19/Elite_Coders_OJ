@@ -41,7 +41,7 @@ export default function Openingpage() {
           }
           else 
           {
-            alert("login kro bsdk");
+            alert("please login");
             jump("/login")
           }
         })
