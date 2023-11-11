@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://abhigpta19:MuKtoNLMVtpz5LJa@elitecodersoj.4kci20n.mongodb.net/",{
+mongoose.connect("mongodb+srv://abhigpta19:3ASTrHxOYoEDAPZw@elitecluster.b73w9ps.mongodb.net/",{
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
